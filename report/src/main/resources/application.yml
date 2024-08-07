@@ -1,0 +1,32 @@
+server:
+  port: 8005
+  error:
+    include-message: always
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+#    username: root
+#    password: qghhPLyLVgqzACZnHMJCDpVeqpjSYrNi
+#    url: jdbc:mysql://viaduct.proxy.rlwy.net:22270/railway
+
+    username: nsqauser1
+    password: RDexdyt9
+    url: jdbc:mysql://localhost:3307/nsqa080624?zeroDateTimeBehavior=convertToNull&useSSL=false
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MySQLInnoDBDialect
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    properties:
+      hibernate:
+        format_sql=false:
+    database-platform: org.hibernate.dialect.MySQLDialect
+logging:
+  level:
+    org.springframework: DEBUG

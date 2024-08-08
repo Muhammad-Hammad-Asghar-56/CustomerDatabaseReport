@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8085";
+const API_BASE_URL = "https://api.nstyleintl.com/customer-staging/";
 
 const API_ENDPOINTS = {
   LOGIN: `${API_BASE_URL}/Users/login`,

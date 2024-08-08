@@ -43,3 +43,4 @@ com\customer\report\repository\DatacustomerRepository.class
 com\customer\report\dto\CustomerShopDTO.class
 com\customer\report\entity\Servicesgroupmain.class
 com\customer\report\entity\Timesch.class
+com\customer\report\Helper\LocalDateCustomDeserializer.class

@@ -11,7 +11,9 @@ spring:
 #    username: root
 #    password: qghhPLyLVgqzACZnHMJCDpVeqpjSYrNi
 #    url: jdbc:mysql://viaduct.proxy.rlwy.net:22270/railway
-
+#    username: root
+#    password: root
+#    url: jdbc:mysql://localhost:3306/customerdatabase2
     username: nsqauser1
     password: RDexdyt9
     url: jdbc:mysql://localhost:3307/nsqa080624?zeroDateTimeBehavior=convertToNull&useSSL=false

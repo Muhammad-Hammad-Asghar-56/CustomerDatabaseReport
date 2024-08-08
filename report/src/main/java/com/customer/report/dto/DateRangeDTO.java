@@ -1,26 +1,37 @@
 package com.customer.report.dto;
 
+import com.customer.report.Helper.LocalDateCustomDeserializer;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class DateRangeDTO {
-    private LocalDate startDate;
-    private LocalDate endDate;
-
+//    @JsonDeserialize(using = LocalDateCustomDeserializer.class)
+    private String startDate;
+//    @JsonDeserialize(using = LocalDateCustomDeserializer.class)
+    private String endDate;
+    public DateRangeDTO(String startDate, String endDate) {
+        this.startDate =  startDate;
+        this.endDate = endDate;
+    }
     // Getters and setters
     public LocalDate getStartDate() {
-        return startDate;
+        return LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
     public LocalDate getEndDate() {
-        return endDate;
+        return LocalDate.parse(startDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
-    public void setEndDate(LocalDate endDate) {
+
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 }

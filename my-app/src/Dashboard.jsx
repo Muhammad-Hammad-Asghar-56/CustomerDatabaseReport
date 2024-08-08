@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const formatDateForAPI = (date) => {
-  return dayjs(date).format('YYYY-MM-DD') + 'T00:00:00';
+  return dayjs(date).format('YYYY-MM-DD');
 };
 
 export default function Dashboard({ toggleLoader }) {
